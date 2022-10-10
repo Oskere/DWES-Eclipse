@@ -1,10 +1,11 @@
 <?php
-class Alumno {
+class Alumno extends Persona {
     private $CodMatricula = "";
     private $ciclo = "";
     
-    public function setAlumno($CodMatricula, $ciclo) {
-        $this->CodMatricula= $CodMatricula;
+    public function __construct($nombre,$dni,$email,$codMatricula,$ciclo) {
+        parent::construct;
+        $this->codMatricula = $codMatricula;
         $this->ciclo = $ciclo;
     }
     

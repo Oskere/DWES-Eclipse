@@ -1,49 +1,63 @@
 <?php
-class Persona {
+abstract class Persona {
     private $name = "";
     private $dni = "";
-    private $emaiol = "";
+    private $email = "";
     
-}
+    
+    public function __construct($name, $dni, $email){
+        $name->name= $name;
+        $dni->dni= $dni;
+        $email->email= $email;
+    }
+    
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 
-class Alumno {
-    private $CodMatricula = "";
-    private $ciclo = "";
-    
-    public function setAlumno($CodMatricula, $ciclo) {
-        $this->CodMatricula= $CodMatricula;
-        $this->ciclo = $ciclo;
+    /**
+     * @return string
+     */
+    public function getDni()
+    {
+        return $this->dni;
     }
-    
-    public function get_Cod() {
-        return $this->CodMatricula;
-    }
-    
-    public function get_ciclo() {
-        return $this->ciclo;
-    }
-    
-}
 
-class Docente {
-    private $sueldo = 0;
-    
-    public function setDocente($sueldo) {
-        $this->sueldo = $sueldo;
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
-    
-    public function get_sueldo() {
-        return $this->sueldo;
-    }
-}
 
-class CentroFP {
-    private $cod = "";
-    private $nombre = "";
-    
-    public function setCod($cod) {
-        $this->cod = $cod;
-        
+    /**
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
+
+    /**
+     * @param string $dni
+     */
+    public function setDni($dni)
+    {
+        $this->dni = $dni;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
     
 }
